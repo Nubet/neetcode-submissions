@@ -7,8 +7,7 @@ class Solution {
             freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
 
-        // sort numbvers by frequency descading, reversed() because the default order is
-        // ascedingabstract
+        // sort numbvers by frequency descading, reversed() because the default order is ascending
         List<Integer> uniqeElements = new ArrayList<>(freq.keySet());
         uniqeElements.sort(Comparator.comparingInt(freq::get).reversed());
 
